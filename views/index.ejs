@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+</head>
+<body>
+    <%- include('./../components/header.ejs') %> 
+
+    <h1>Welcome to My E-Shop!</h1>
+    <p>Explore some of our featured products:</p>
+  
+  
+    <ul>
+      <% products.forEach(product => { %>
+        <li>
+          <a href="/product/<%= product.name %>">
+            <img width="100" src="<%= product.imageUrl %>" alt="<%= product.name %>">
+            <h2><%= product.name %></h2>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="/products">See All Products</a>
+
+    
+
+
+    <%- include('./../components/footer.ejs') %> 
+
+</body>
+</html>
