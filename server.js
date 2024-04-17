@@ -41,7 +41,7 @@ async function getProductData(req, res, next) {
   
 
 // Routes
-app.get('/', getProductData, async (req, res) => {
+app.get('/', getProductData, (req, res) => {
     console.log(`Rendering template: ${__dirname}/views/index.ejs`);
     res.render('index', { products: req.products }); // Assuming your EJS template is named 'index.ejs'
 });
