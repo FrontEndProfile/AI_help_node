@@ -33,7 +33,7 @@ async function getProductData(req, res, next) {
       next();
     } catch (error) {
       console.error('Error fetching product data:', error);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send('Internal Server Error getting products...');
     }
   }
   
