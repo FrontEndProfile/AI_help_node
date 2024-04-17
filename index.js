@@ -8,6 +8,8 @@ const fetch = require('node-fetch');
 const app = express();
 // app.use(compression());  // Add compression middleware
 app.set('view engine', 'ejs');
+app.set('views', './views');  // Adjust the path if necessary
+
 
 // Register header and footer partials (after app declaration)
 app.locals.header = './components/header.ejs';
@@ -40,8 +42,8 @@ async function getProductData(req, res, next) {
 
 // Routes
 app.get('/', getProductData, (req, res) => {
-    // console.log(`Rendering template: ${__dirname}/views/index.ejs`);
-    res.render('index.ejs', { products: req.products }); // Assuming your EJS template is named 'index.ejs'
+    console.log(`Rendering template: ${__dirname}/views/index.ejs`);
+    res.render('index', { products: req.products }); // Assuming your EJS template is named 'index.ejs'
 });
 
 app.get('/about', (req, res) => {
