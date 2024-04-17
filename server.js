@@ -8,7 +8,7 @@ const fetch = require('node-fetch');
 const app = express();
 // app.use(compression());  // Add compression middleware
 app.set('view engine', 'ejs');
-app.set('views', './views');  // Adjust the path if necessary
+// app.set('views', './views');  // Adjust the path if necessary
 
 
 // Register header and footer partials (after app declaration)
