@@ -1,12 +1,12 @@
 const express = require('express');
 const ejs = require('ejs');
 const fetch = require('node-fetch');
-// const compression = require('compression');  // Import compression
+const compression = require('compression');  // Import compression
 
 
 
 const app = express();
-// app.use(compression());  // Add compression middleware
+app.use(compression());  // Add compression middleware
 app.set('view engine', 'ejs');
 // app.set('views', './views');  // Adjust the path if necessary
 
